@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+/**
+ * Student Name: L Kwinana
+ * Student Number: ST10445079
+ */
+public class Payday1 {
+    
+    public static void main(String[] args) {
+        
+        Scanner keyboard = new Scanner (System.in);
+        double hours;
+        double rate;
+        double pay = 0;
+        
+        System.out.print("How many hours did you work? ");
+        hours = keyboard.nextDouble();
+        System.out.print("How much do you get paid per hour? ");
+        rate = keyboard.nextDouble();
+        
+        if (hours  <= 40){
+            pay = hours * rate ;
+        } 
+        else {
+            pay = hours * 1.5 * rate ; // overtime rate is 1.5 times the regular rate
+        }
+        System.out.println("You earned $" + pay);
+    
+    }    
+}
