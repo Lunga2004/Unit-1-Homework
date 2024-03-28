@@ -1,17 +1,25 @@
 import java.util.Scanner;
 /**
+ * Project Name: SalesTax
 *Student Name: L Kwinana
 * Student Number: ST10445079
+* Date: 28 March 2024
+* Date of submission: 1/4/2024
 */
 public class SalesTax {
  public static void main(String[] args) {
  //This program calculates the total price which includes sales //tax
  //identifier declarations
  final double TAX_RATE = 0.055;
+ //This variable represents the tax rate
  double price;
+ //This variable represents the item's price
  double tax;
+ //This variable represents tax
  double total;
+ //This variable represents the total
  String item;
+//This variable represents the item
 
  //create a Scanner object to read from the keyboard
  Scanner keyboard = new Scanner(System.in);
@@ -22,8 +30,11 @@ public class SalesTax {
  price = keyboard.nextDouble();
 
  //calculations
+ // Calculates the tax
  tax = price + TAX_RATE;
+ // Calculates the total
  total = price * tax;
+ 
  //display results
  System.out.print(item + " $");
  System.out.println(price);
