@@ -1,31 +1,43 @@
-import java.util.Scanner;
+import java.util.Scanner;          //To be able to read from keyboard
 
 /**
+ * This program calculates the user’s gross pay based on the
+number of hours worked and hourly pay rate
+* Project Name: Payday1
  * Student Name: L Kwinana
  * Student Number: ST10445079
+ * Date: 28 March 2024
+ * Date of submission: 1/4/2024
  */
 public class Payday1 {
     
-    public static void main(String[] args) {
-
+    public static void main(String[] args) { 
         //identifier declarations
+        //create a Scanner object to read from the keyboard
         Scanner keyboard = new Scanner (System.in);
         double hours;
+        //This variable represents the hours worked
         double rate;
+        //This variable represents the rate of pay
         double pay = 0;
+        //This variable represents the pay
         
+        //display prompts and get input
         System.out.print("How many hours did you work? ");
         hours = keyboard.nextDouble();
         System.out.print("How much do you get paid per hour? ");
         rate = keyboard.nextDouble();
-
+        
         //Calculations
         if (hours  <= 40){
+            //Calculate gross pay for 40 hours or less
             pay = hours * rate ;
         } 
         else {
+            //Calculate gross pay for more than 40 hours
             pay = hours * 1.5 * rate ; // overtime rate is 1.5 times the regular rate
         }
+        //display results
         System.out.println("You earned $" + pay);
     
     }    
